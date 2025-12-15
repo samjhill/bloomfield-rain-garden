@@ -79,13 +79,6 @@ body {
     margin-top: 10px;
 }
 
-.tagline-es {
-    font-size: 1.1rem;
-    font-style: italic;
-    opacity: 0.9;
-    margin-top: 5px;
-}
-
 /* Sections */
 .section {
     padding: 60px 20px;
@@ -114,37 +107,26 @@ body {
     background-color: white;
 }
 
-.two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1000px;
+.content-column {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.column h3 {
-    color: var(--earth-green);
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--earth-tan);
-    padding-bottom: 10px;
-}
-
-.column p {
+.content-column p {
     margin-bottom: 15px;
     text-align: justify;
 }
 
-.column ul {
+.content-column ul {
     margin-left: 20px;
     margin-bottom: 20px;
 }
 
-.column li {
+.content-column li {
     margin-bottom: 10px;
 }
 
-.column strong {
+.content-column strong {
     color: var(--accent-blue);
 }
 
@@ -394,11 +376,6 @@ body {
         font-size: 1.6rem;
     }
 
-    .two-columns {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -417,25 +394,25 @@ body {
     }
 
     .plant-name-col::before {
-        content: "Plant / Planta: ";
+        content: "Plant: ";
         font-weight: 600;
         color: var(--earth-green);
     }
 
     .plant-latin-col::before {
-        content: "Latin / Científico: ";
+        content: "Latin Name: ";
         font-weight: 600;
         color: var(--earth-green);
     }
 
     .plant-height-col::before {
-        content: "Height / Altura: ";
+        content: "Height: ";
         font-weight: 600;
         color: var(--earth-green);
     }
 
     .plant-water-col::before {
-        content: "Water / Agua: ";
+        content: "Water Preference: ";
         font-weight: 600;
         color: var(--earth-green);
     }
