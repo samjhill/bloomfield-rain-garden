@@ -1,0 +1,461 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --earth-green: #6b8e5a;
+    --earth-brown: #8b6f47;
+    --earth-tan: #d4c4a8;
+    --earth-cream: #f5f1e8;
+    --earth-dark: #3d3d2e;
+    --earth-light: #faf9f6;
+    --accent-blue: #4a7c7e;
+    --accent-teal: #5a9a9c;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--earth-dark);
+    background-color: var(--earth-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--earth-green) 0%, var(--accent-blue) 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.tagline-es {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--earth-green);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--earth-dark);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* What is a Rain Garden Section */
+.what-is-section {
+    background-color: white;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.column h3 {
+    color: var(--earth-green);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--earth-tan);
+    padding-bottom: 10px;
+}
+
+.column p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.column ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.column li {
+    margin-bottom: 10px;
+}
+
+.column strong {
+    color: var(--accent-blue);
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(135deg, var(--earth-cream) 0%, var(--earth-tan) 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--earth-green);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--earth-dark);
+    line-height: 1.4;
+}
+
+/* Plants Section */
+.plants-section {
+    background-color: white;
+}
+
+.plant-zones {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.plant-zone {
+    background-color: var(--earth-cream);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--earth-green);
+}
+
+.zone-title {
+    font-size: 1.5rem;
+    color: var(--earth-green);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.plant-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.plant-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1.5fr;
+    gap: 15px;
+    padding: 15px;
+    background-color: white;
+}
+
+.plant-row.header-row {
+    background-color: var(--earth-green);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.plant-row:not(.header-row):nth-child(even) {
+    background-color: var(--earth-light);
+}
+
+.plant-name-col,
+.plant-latin-col,
+.plant-height-col,
+.plant-water-col {
+    display: flex;
+    align-items: center;
+}
+
+.plant-latin-col {
+    font-style: italic;
+    color: var(--earth-brown);
+}
+
+/* Photo Section */
+.photo-section {
+    background: linear-gradient(135deg, var(--earth-cream) 0%, var(--earth-tan) 100%);
+}
+
+.photo-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo-placeholder {
+    background-color: white;
+    border: 3px dashed var(--earth-green);
+    border-radius: 10px;
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--earth-dark);
+    font-size: 1.2rem;
+}
+
+.photo-placeholder p {
+    margin-bottom: 10px;
+}
+
+/* Sign Section */
+.sign-section {
+    background-color: white;
+}
+
+.sign-link-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sign-link {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--earth-green) 0%, var(--accent-blue) 100%);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sign-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--earth-green) 0%, var(--accent-blue) 100%);
+    color: white;
+}
+
+.cta-section .section-title {
+    color: white;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-text {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.cta-description,
+.cta-description-es {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: white;
+    color: var(--earth-green);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--earth-dark);
+    color: var(--earth-tan);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .plant-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .plant-row.header-row {
+        display: none;
+    }
+
+    .plant-name-col::before {
+        content: "Plant / Planta: ";
+        font-weight: 600;
+        color: var(--earth-green);
+    }
+
+    .plant-latin-col::before {
+        content: "Latin / Científico: ";
+        font-weight: 600;
+        color: var(--earth-green);
+    }
+
+    .plant-height-col::before {
+        content: "Height / Altura: ";
+        font-weight: 600;
+        color: var(--earth-green);
+    }
+
+    .plant-water-col::before {
+        content: "Water / Agua: ";
+        font-weight: 600;
+        color: var(--earth-green);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 40px 15px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .sign-link {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+}
+
